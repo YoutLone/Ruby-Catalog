@@ -6,9 +6,9 @@ def main
     puts ' 1 - List All Books'
     puts ' 2 - List All Music Albums'
     puts ' 3 - List All Games'
-    puts ' 4 - List All Genres (e.g 'Comedy', 'Thriller')'
-    puts ' 5 - List All Labels  (e.g. 'Gift', 'New')'
-    puts ' 6 - List All Authors (e.g. 'Stephen King')'
+    puts ' 4 - List All Genres'
+    puts ' 5 - List All Labels'
+    puts ' 6 - List All Authors'
     puts ' 7 - Add a Book'
     puts ' 8 - Add a Music Album'
     puts ' 9 - Add a Game'
@@ -29,7 +29,7 @@ class Selection
     when 3
       puts 'list all games'
     when 4
-      puts 'list all genres'    
+      puts 'list all genres'
     when 5
       puts 'list all labels'
     when 6
@@ -41,8 +41,7 @@ class Selection
     when 9
       puts 'add a game'
     when 10
-      'exit from the program'      
-      abort
+      'exit from the program'
     end
   end
 end
