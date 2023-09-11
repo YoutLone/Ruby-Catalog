@@ -16,4 +16,11 @@ class Label
     def self.all
         ObjectSpace.each_object(self).to_a
     end
+
+    def self.display
+        all.each do |label|
+            puts "Label Title: #{label.title.to_s}"
+            puts "_______________________________"
+        end
+    end
 end
