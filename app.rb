@@ -22,6 +22,6 @@ class App
     end
 
     def self.list_all_labels
-
+        Label.display
     end
 end
