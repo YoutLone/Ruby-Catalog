@@ -15,4 +15,15 @@ class Book < Item
     def self.all
         ObjectSpace.each_object(self).to_a
     end
+
+    def self.display
+        all.each do |book| 
+            puts "ID: #{book.id}"
+            puts "Publisher: #{book.publisher}"
+            puts "Cover State: #{book.cover_state}"
+            puts "Label: #{book.label.title}"
+            puts "Published Date: #{book.publish_date}"
+            puts '_____________________________________________'
+        end
+    end
 end
