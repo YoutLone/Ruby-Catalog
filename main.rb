@@ -23,7 +23,7 @@ class Selection
     def choice_method(option)
         case option
         when 1 
-            puts "list all books"
+            puts "list all books" 
         when 2 
             puts "list all music albums"
         when 3
