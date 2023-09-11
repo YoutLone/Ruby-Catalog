@@ -35,7 +35,7 @@ class Selection
         when 4
             puts "list all genres"
         when 5 
-            puts "list all labels"
+            App.list_all_labels
         when 6 
             puts "list all authors"
         when 7 
