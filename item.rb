@@ -13,6 +13,11 @@ class Item
     @archived = archived
   end
 
+  def author=(author)
+    @author = author
+    author.items << self unless author.items.include?(self)
+  end
+
   def can_be_archived?
     publish_year = Date.strptime(@publish_date, '%d-%m-%Y')
     Time.now.year - publish_year.to_i > 10
