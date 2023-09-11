@@ -7,7 +7,6 @@ class Item
         @id = Random.rand(1..1000)
         @genre = nil
         @author = nil
-        @label = nil
         @publish_date = publish_date
         @archived = archived
     end
@@ -22,5 +21,10 @@ class Item
     end
     
     private :can_be_archived?
+
+    def label=(label)
+        @label = label
+        label.items.push(self) unless label.items.include?(self)
+    end
 
 end
