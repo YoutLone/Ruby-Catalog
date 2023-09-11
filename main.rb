@@ -1,3 +1,7 @@
+require_relative 'app'
+require_relative 'book'
+require_relative 'label'
+
 puts 'Welcome to Catolog of My Things'.center(50, '#')
 puts ''.center(50,'-')
 
@@ -23,7 +27,7 @@ class Selection
     def choice_method(option)
         case option
         when 1 
-            puts "list all books" 
+            App.list_books
         when 2 
             puts "list all music albums"
         when 3
@@ -35,7 +39,7 @@ class Selection
         when 6 
             puts "list all authors"
         when 7 
-            puts "add a book"
+            App.add_book
         when 8 
             puts "add a music album"
         when 9
