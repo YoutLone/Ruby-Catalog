@@ -52,4 +52,5 @@ class Selection
     end
 end
 
+App.load_data
 main

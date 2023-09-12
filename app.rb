@@ -28,4 +28,8 @@ class App
     def self.save_and_exit
         Book.save
     end
+
+    def self.load_data
+        Book.load_books
+    end
 end
