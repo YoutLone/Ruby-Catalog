@@ -1,13 +1,13 @@
 [
   {
-    "id": 174,
+    "id": 13,
     "publisher": "htet",
     "cover_state": "bad",
     "publish_date": "2020/12/2",
     "label": {
-      "id": 476,
-      "title": "hello",
-      "color": "hello"
+      "id": 129,
+      "title": "Prettier",
+      "color": "Prettier"
     }
   }
 ]

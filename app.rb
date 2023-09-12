@@ -27,9 +27,11 @@ class App
 
     def self.save_and_exit
         Book.save
+        Label.save
     end
 
     def self.load_data
         Book.load_books
+        Label.load_labels
     end
 end
