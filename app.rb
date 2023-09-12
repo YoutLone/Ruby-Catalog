@@ -24,4 +24,8 @@ class App
     def self.list_all_labels
         Label.display
     end
+
+    def self.save_and_exit
+        Book.save
+    end
 end
