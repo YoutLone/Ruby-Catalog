@@ -1,5 +1,4 @@
-require_relative '../author'
-require_relative '../item'
+require_relative 'spec_helper'
 
 describe Author do
   before :each do

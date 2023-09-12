@@ -1,4 +1,4 @@
-require_relative '../game'
+require_relative 'spec_helper'
 
 describe Game do
   describe '#can_be_archived?' do
