@@ -11,14 +11,22 @@ class Item
   end
 
   def can_be_archived?
-    published_year = Date.strptime(@published_date, '%d-%m-%Y').strftime('%Y')
-    Time.now.year - published_year.to_i > 10
+    publish_year = Date.strptime(@published_date, '%d-%m-%Y')
+    Time.now.year - publish_year.to_i > 10
+  end
+
+  def move_to_archive?
+    can_be_archived? == true
   end
 
   private :can_be_archived?
 
-  def move_to_archived?
-    can_be_archived? == true
+  def label=(label)
+    @label = label
+    label.items.push(self) unless label.items.include?(self)
+    published_year = Date.strptime(@published_date, '%d-%m-%Y').strftime('%Y')
+    Time.now.year
+    published_year.to_i
   end
 
   def genre(genre)
