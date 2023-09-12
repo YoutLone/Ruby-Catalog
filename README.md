@@ -101,7 +101,7 @@ it will install the required gemfile for running the project
 👤 **Htet Wai Yan**
 
 - GitHub: [@HtetWaiYan7191](https://github.com/HtetWaiYan7191)
-- LinkedIn: [htetwaiyan](https://linkedin.com/in/htet-wai-yan-19)
+- LinkedIn: [htetwaiyan](https://www.linkedin.com/in/htet-wai-yan19/)
   
 👤 **Than Myo Htet**
 
