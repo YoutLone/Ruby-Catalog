@@ -1,7 +1,7 @@
 
 <div align="center">
 
-  <h1><b>School Library</b></h1>
+  <h1><b>Ruby Catalog</b></h1>
 
 </div>
 
