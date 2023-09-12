@@ -48,4 +48,26 @@ class Book < Item
             puts '_____________________________________________'
         end
     end
+
+    def self.load_books
+        if File.exist?('books.json')
+        books_file = File.read('books.json')
+            if books_file.empty?
+                puts "No books saved yet"
+            else
+                books = JSON.parse(books_file)
+                puts "Books: "
+                books.each do |book|
+                    puts "ID: #{book['id']}"
+                    puts "Publisher: #{book['publisher']}"
+                    puts "Cover State: #{book['cover_state']}"
+                    puts "Label: #{book['label']['title']}"
+                    puts "Published Date: #{book['publish_date']}"
+                    puts '_____________________________________________'
+                end
+            end
+        else
+            puts " Books file do not exist"
+        end
+    end
 end
