@@ -1,4 +1,6 @@
 require_relative './item'
+require 'json'
+
 class Book < Item
     attr_reader :publish_date, :publisher, :cover_state, :label
     def initialize(publisher:, cover_state:, publish_date:, label:)
@@ -14,6 +16,26 @@ class Book < Item
 
     def self.all
         ObjectSpace.each_object(self).to_a
+    end
+
+    def self.save
+        books = []
+        all.each do |book|
+            books << {
+                id: book.id,
+                publisher: book.publisher,
+                cover_state: book.cover_state,
+                publish_date: book.publish_date,
+                label: {
+                    id: book.label.id,
+                    title: book.label.title,
+                    color: book.label.title
+                }
+            }
+        end
+
+        File.write('books.json', JSON.pretty_generate(books))
+        puts "Books Saved successfully ..."
     end
 
     def self.display
