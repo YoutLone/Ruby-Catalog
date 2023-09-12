@@ -1,3 +1,5 @@
+require 'json'
+
 class Author
   attr_accessor :first_name, :last_name
   attr_reader :id, :items
@@ -12,8 +14,8 @@ class Author
   end
 
   def add_item(item)
-    @items << item
     item.author = self
+    @items << item
   end
 
   def list_authors

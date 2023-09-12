@@ -14,6 +14,7 @@ describe Author do
   end
 
   context '#test Author' do
+    @author = Author.new('George', 'Martin')
     it 'should return correct first name of author' do
       expect(@author.first_name).to eq('George')
     end
