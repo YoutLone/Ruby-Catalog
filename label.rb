@@ -1,60 +1,61 @@
 require 'json'
 
 class Label
-    attr_reader :id
-    attr_accessor :title, :color, :items
-    def initialize(title:, color: "white")
-        @id = Random.rand(1..1000)
-        @title = title
-        @color = color
-        @items = []
-    end
+  attr_reader :id
+  attr_accessor :title, :color, :items
 
-    def add_item(item)
-        item.label = self
-        @items << item
-    end
+  def initialize(title:, color: 'white')
+    @id = Random.rand(1..1000)
+    @title = title
+    @color = color
+    @items = []
+  end
 
-    def self.all
-        ObjectSpace.each_object(self).to_a
-    end
+  def add_item(item)
+    item.label = self
+    @items << item
+  end
 
-    def self.save
-        labels = []
-        all.each do |label|
-            labels << {
-                id: label.id,
-                title: label.title,
-                color: label.color
-            } 
+  def self.all
+    ObjectSpace.each_object(self).to_a
+  end
+
+  def self.save
+    labels = []
+    all.each do |label|
+      labels << {
+        id: label.id,
+        title: label.title,
+        color: label.color
+      }
+    end
+    File.write('labels.json', JSON.pretty_generate(labels))
+    puts 'Labels Saved SuccessFully'
+  end
+
+  def self.load_labels
+    if File.exist?('labels.json')
+      labels_file = File.read('labels.json')
+      if labels_file.empty?
+        puts 'No labels saved yet'
+        puts '____________________'
+      else
+        labels = JSON.parse(labels_file)
+        puts 'Labels: '
+        labels.each do |label|
+          puts "Label Title: #{label['title']}"
+          puts '_____________________________'
         end
-        File.write('labels.json', JSON.pretty_generate(labels))
-        puts "Labels Saved SuccessFully"
+      end
+    else
+      puts ' File does not exist'
     end
+  end
 
-    def self.load_labels
-        if File.exist?('labels.json')
-        labels_file = File.read('labels.json')
-            if labels_file.empty?
-                puts "No labels saved yet"
-                puts "____________________"
-            else
-                labels = JSON.parse(labels_file)
-                puts "Labels: "
-                labels.each do |label| 
-                    puts "Label Title: #{label['title']}"
-                    puts "_____________________________"
-                end
-            end
-        else
-            puts " File does not exist"
-        end
+  def self.display
+    all.each do |label|
+      puts "Label Title: #{label.title}"
+      puts '_______________________________'
     end
-
-    def self.display
-        all.each do |label|
-            puts "Label Title: #{label.title.to_s}"
-            puts "_______________________________"
-        end
-    end
+  end
 end
