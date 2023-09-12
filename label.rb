@@ -41,10 +41,10 @@ class Label
         puts '____________________'
       else
         labels = JSON.parse(labels_file)
-        puts 'Labels: '
         labels.each do |label|
-          puts "Label Title: #{label['title']}"
-          puts '_____________________________'
+          new(
+            title: label['title']
+          )
         end
       end
     else
@@ -55,7 +55,7 @@ class Label
   def self.display
     all.each do |label|
       puts "Label Title: #{label.title}"
-      puts '_______________________________'
     end
+    puts '_______________________________'
   end
 end
