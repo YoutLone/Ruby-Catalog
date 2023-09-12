@@ -45,8 +45,9 @@ class Selection
         when 9
             puts "add a game"
         when 10 
-            "exit from the program"
-             abort
+            App.save_and_exit
+            abort
+            puts "Exit from the app"
         end
     end
 end
