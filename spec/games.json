@@ -1,0 +1,22 @@
+{
+    "Games": [
+      {
+        "multiplayer": "true",
+        "last_played_at": "2019-01-01",
+        "publish_date": "2020-01-01",
+        "id": 465
+      },
+      {
+        "multiplayer": "Yes",
+        "last_played_at": "2023-05-03",
+        "publish_date": "2023-05-03",
+        "id": 780
+      },
+      {
+        "multiplayer": "yes",
+        "last_played_at": "2023-05-03",
+        "publish_date": "2023-05-03",
+        "id": 320
+      }
+    ]
+  }
