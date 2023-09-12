@@ -1,6 +1,8 @@
 require_relative 'app'
 require_relative 'book'
 require_relative 'label'
+require_relative 'music_album'
+require_relative 'genre'
 
 puts 'Welcome to Catolog of My Things'.center(50, '#')
 puts ''.center(50, '-')
@@ -31,11 +33,11 @@ class Selection
     when 1
       App.list_books
     when 2
-      puts 'list all music albums'
+      App.list_music_albums
     when 3
       puts 'list all games'
     when 4
-      puts 'list all genres'
+      App.list_all_genres
     when 5
       App.list_all_labels
     when 6
@@ -43,7 +45,7 @@ class Selection
     when 7
       App.add_book
     when 8
-      puts 'add a music album'
+      App.add_music_album
     when 9
       puts 'add a game'
     when 10

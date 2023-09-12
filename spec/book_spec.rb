@@ -3,7 +3,7 @@ require_relative 'spec_helper'
 describe Book do
   before :each do
     @label = Label.new(title: 'Naruto', color: 'black')
-    @book = Book.new(publisher: 'htet', cover_state: 'bad', publish_date: '2/12/2020', label: @label)
+    @book = Book.new(publisher: 'htet', cover_state: 'bad', published_date: '2/12/2020', label: @label)
   end
 
   describe '#new' do
@@ -17,7 +17,7 @@ describe Book do
       end
 
       it 'should return correct publish date' do
-        expect(@book.publish_date).to eq '2/12/2020'
+        expect(@book.published_date).to eq '2/12/2020'
       end
 
       it 'should return correct label' do

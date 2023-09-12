@@ -3,13 +3,13 @@ require_relative 'label'
 require 'json'
 
 class Book < Item
-  attr_reader :publish_date, :publisher, :cover_state, :label
+  attr_reader :published_date, :publisher, :cover_state, :label
 
-  def initialize(publisher:, cover_state:, publish_date:, label:)
+  def initialize(publisher:, cover_state:, published_date:, label:)
     @publisher = publisher
     @cover_state = cover_state
     @label = label
-    super(publish_date: publish_date)
+    super(published_date: published_date)
   end
 
   def can_be_archived?()
@@ -27,7 +27,7 @@ class Book < Item
         id: book.id,
         publisher: book.publisher,
         cover_state: book.cover_state,
-        publish_date: book.publish_date,
+        published_date: book.published_date,
         label: {
           id: book.label.id,
           title: book.label.title,
@@ -52,7 +52,7 @@ class Book < Item
             publisher: book['publisher'],
             cover_state: book['cover_state'],
             label: Label.new(title: book['label']['title']),
-            publish_date: book['publish_date']
+            published_date: book['published_date']
           )
         end
       end
@@ -67,7 +67,7 @@ class Book < Item
       puts "Publisher: #{book.publisher}"
       puts "Cover State: #{book.cover_state}"
       puts "Label: #{book.label.title}"
-      puts "Published Date: #{book.publish_date}"
+      puts "Published Date: #{book.published_date}"
       puts '_____________________________________________'
     end
   end
