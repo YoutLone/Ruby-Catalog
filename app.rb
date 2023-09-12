@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-=======
 require_relative 'book'
 require_relative 'label'
 require_relative 'music_album'
@@ -65,4 +62,3 @@ class App
     Genre.display
   end
 end
->>>>>>> fe4e4c95d6d49e792d9253a7b8aa477af1a4f9f5
