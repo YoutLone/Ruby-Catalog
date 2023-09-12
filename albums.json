@@ -1,0 +1,20 @@
+[
+  {
+    "id": 587,
+    "on_spotify": true,
+    "genre": {
+      "id": 809,
+      "name": "Rock"
+    },
+    "published_date": "2018/06/04"
+  },
+  {
+    "id": 151,
+    "on_spotify": true,
+    "genre": {
+      "id": 153,
+      "name": "Hip Hop"
+    },
+    "published_date": "2015/08/04"
+  }
+]
