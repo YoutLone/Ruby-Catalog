@@ -39,8 +39,8 @@ class MusicAlbum < Item
   end
 
   def self.load_albums
-      if File.exist?('albums.json')
-        albums_file = File.read('albums.json')
+    if File.exist?('albums.json')
+      albums_file = File.read('albums.json')
       if albums_file.empty?
         puts 'No albums saved yet'
       else
