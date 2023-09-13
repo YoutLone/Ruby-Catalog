@@ -1,20 +1,38 @@
 [
   {
-    "id": 127,
+    "id": 385,
     "on_spotify": true,
     "genre": {
-      "id": 21,
+      "id": 796,
+      "name": "pop "
+    },
+    "published_date": "2020/12/2"
+  },
+  {
+    "id": 802,
+    "on_spotify": true,
+    "genre": {
+      "id": 772,
+      "name": "Rock"
+    },
+    "published_date": "2018/06/04"
+  },
+  {
+    "id": 218,
+    "on_spotify": true,
+    "genre": {
+      "id": 130,
       "name": "Hip Hop"
     },
     "published_date": "2015/08/04"
   },
   {
-    "id": 629,
+    "id": 333,
     "on_spotify": true,
     "genre": {
-      "id": 190,
-      "name": "Rock"
+      "id": 103,
+      "name": "pop "
     },
-    "published_date": "2018/06/04"
+    "published_date": "2020/12/2"
   }
 ]

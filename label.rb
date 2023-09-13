@@ -30,7 +30,6 @@ class Label
       }
     end
     File.write('labels.json', JSON.pretty_generate(labels))
-    puts 'Labels Saved SuccessFully'
   end
 
   def self.load_labels

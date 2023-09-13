@@ -37,7 +37,6 @@ class Book < Item
     end
 
     File.write('books.json', JSON.pretty_generate(books))
-    puts 'Books Saved successfully ...'
   end
 
   def self.load_books

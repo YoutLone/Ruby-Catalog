@@ -37,6 +37,7 @@ class App
     Genre.save
     Author.save
     Game.save
+    puts 'Data saved successfully'
   end
 
   def self.load_data
