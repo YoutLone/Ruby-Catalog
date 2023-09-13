@@ -1,3 +1,4 @@
+-- code below added by team member #2
 CREATE TABLE books (
     id serial PRIMARY KEY,
     publisher VARCHAR(50) NOT NULL,

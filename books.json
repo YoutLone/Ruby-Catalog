@@ -1,11 +1,11 @@
 [
   {
-    "id": 255,
+    "id": 793,
     "publisher": "htet",
     "cover_state": "bad",
-    "publish_date": "2020/12/2",
+    "published_date": null,
     "label": {
-      "id": 150,
+      "id": 71,
       "title": "yan",
       "color": "yan"
     }

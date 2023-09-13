@@ -1,1 +1,38 @@
-[{"id":672,"multiplayer_game":true,"last_played_date":"1/1/2023","released_date":"1/1/2022"},{"id":7,"multiplayer_game":true,"last_played_date":"22/3/2023","released_date":"23/2/2022"},{"id":633,"multiplayer_game":false,"last_played_date":"12/2/2022","released_date":"23/1/2023"},{"id":249,"multiplayer_game":true,"last_played_date":"12/3/2023","released_date":"11/2/2022"},{"id":151,"multiplayer_game":true,"last_played_date":"12/2/2023","released_date":"11/2/2022"}]  
+[
+  {
+    "id": 813,
+    "name": "Rich Poor",
+    "multiplayer": true,
+    "last_played_at": "2023/05/05",
+    "author": {
+      "id": 513,
+      "first_name": "Robert",
+      "last_name": "T.Kiyosaki"
+    },
+    "published_date": "2012/04/08"
+  },
+  {
+    "id": 851,
+    "name": "Rich Poor",
+    "multiplayer": true,
+    "last_played_at": "2012/05/04",
+    "author": {
+      "id": 738,
+      "first_name": "Robert",
+      "last_name": "T.Kiyosaki"
+    },
+    "published_date": "2010/05/04"
+  },
+  {
+    "id": 834,
+    "name": "Harry Potter",
+    "multiplayer": true,
+    "last_played_at": "2023/05/04",
+    "author": {
+      "id": 205,
+      "first_name": "JK",
+      "last_name": "Rowling"
+    },
+    "published_date": "2010/08/07"
+  }
+]
