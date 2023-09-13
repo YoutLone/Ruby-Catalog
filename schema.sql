@@ -1,9 +1,9 @@
--- code below added by team member #2
+-- code below added by team member #1
 CREATE TABLE books (
     id serial PRIMARY KEY,
     publisher VARCHAR(50) NOT NULL,
     cover_state VARCHAR(30)NOT NULL,
-    publish_date DATE,
+    published_date DATE,
 );
 
 CREATE TABLE labels (
@@ -44,3 +44,8 @@ CREATE TABLE Game (
   multiplayer BOOLEAN NOT NULL,
   FOREIGN KEY(item_id) REFERENCES Item(id)
 );
+
+CREATE INDEX idx_genre_id_music_album ON MusicAlbum (genre_id);
+CREATE INDEX idx_genre_id_genre ON Genre (genre_id);
+CREATE INDEX idx_item_id_author ON Author(item_id);
+CREATE INDEX idx_item_id_game ON GAME (item);
