@@ -11,7 +11,7 @@ class Item
   end
 
   def can_be_archived?
-    publish_year = Date.strptime(@published_date, '%d-%m-%Y')
+    publish_year = Date.parse(@last_played_at).year
     Time.now.year - publish_year.to_i > 10
   end
 

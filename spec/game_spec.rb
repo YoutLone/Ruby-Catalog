@@ -14,13 +14,13 @@ describe Game do
 
   describe '#can_be_archived?' do
     it 'should be true only if game can be archived' do
-      game1 = Game.new(true, '2019-01-01', '2022-01-01', true)
+      game1 = Game.new(true, '2022-01-01', '2019-01-01', true)
       expect(game1.can_be_archived?).to eq(false)
 
       game2 = Game.new(true, '2022-01-01', '2022-01-01', true)
       expect(game2.can_be_archived?).to eq(false)
 
-      game3 = Game.new(true, '01-01-2020', '01-05-2011', false)
+      game3 = Game.new(true, '2020-01-01', '2011-01-05', true)
       expect(game3.can_be_archived?).to eq(true)
     end
   end
