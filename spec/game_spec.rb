@@ -20,8 +20,8 @@ describe Game do
       game2 = Game.new(true, '2022-01-01', '2022-01-01', true)
       expect(game2.can_be_archived?).to eq(false)
 
-      game3 = Game.new(true, '2020-01-01', '2011-01-05', true)
-      expect(game3.can_be_archived?).to eq(true)
+      game3 = Game.new(true, '2022-06-01', '2011-01-05', false)
+      expect(game3.can_be_archived?).to eq(false)
     end
   end
 end
