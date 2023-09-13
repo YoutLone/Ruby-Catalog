@@ -18,11 +18,11 @@ class App
     print 'Enter Cover State: '
     cover_state = gets.chomp
     print 'Enter Publish Date: '
-    publish_date = gets.chomp
+    published_date = gets.chomp
     print 'Enter Label: '
     label = gets.chomp
     label = Label.new(title: label)
-    Book.new(publisher: publisher, cover_state: cover_state, publish_date: publish_date, label: label)
+    Book.new(publisher: publisher, cover_state: cover_state, published_date: published_date, label: label)
     puts 'Book added successfully'
   end
 

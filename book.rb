@@ -3,7 +3,7 @@ require_relative 'label'
 require 'json'
 
 class Book < Item
-  attr_reader :published_date, :publisher, :cover_state, :label
+  attr_accessor :published_date, :publisher, :cover_state, :label
 
   def initialize(publisher:, cover_state:, published_date:, label:)
     @publisher = publisher
