@@ -1,52 +1,27 @@
-require_relative 'spec_helper'
+require_relative '../game'
 
 describe Game do
-  describe '#can_be_archived?' do
-    context 'Return Boolean based on difference between published date and difference between last played time' do
-      it 'when the difference is greater than ten years and difference between last played time
-      and present time is greater that 2 it should return true' do
-        game = Game.new('Yes', '2019/01/01', '2001/01/01')
-        expect(game.can_be_archived?).to eq(true)
-      end
+  describe '#initialize' do
+    it 'new game must be created' do
+      game = Game.new(true, '10-01-2023', '01-05-2011', false)
 
-      it 'when the difference is less than ten years and difference between last played
-      time and present time is greater that 2 it should return flase' do
-        game = Game.new('Single Player', '2017/01/01', '2022/03/07')
-        expect(game.can_be_archived?).to eq(false)
-      end
-
-      it 'when the difference is greater than ten years and difference between last played
-      time and present time is less that 2 it should return false' do
-        game = Game.new('No', '2022/09/27', '2005/05/22')
-        expect(game.can_be_archived?).to eq(false)
-      end
-
-      it 'when the difference is less than ten years and difference between last played
-      time and present time is less that 2 it should return false' do
-        game = Game.new('No', '2022/09/27', '2022/05/18')
-        expect(game.can_be_archived?).to eq(false)
-      end
+      expect(game.multiplayer).to eq(true)
+      expect(game.last_played_at).to eq('10-01-2023')
+      expect(game.published_date).to eq('01-05-2011')
+      expect(game.archived).to eq(false)
     end
   end
 
-  describe '#Should validate user input' do
-    context 'when user inputs multiplayer' do
-      it 'returns correct value of multiplayer' do
-        game = Game.new('Single Player', '2017/01/01', '2022/03/07')
-        expect(game.multiplayer).to eq('Single Player')
-      end
+  describe '#can_be_archived?' do
+    it 'should be true only if game can be archived' do
+      game1 = Game.new(true, '2019-01-01', '2022-01-01', true)
+      expect(game1.can_be_archived?).to eq(false)
 
-      it 'returns correct date of last_played_at' do
-        game = Game.new('No', '2022/09/27', '2022/05/18')
-        expected_date = Date.parse('2022/09/27')
-        expect(game.last_played_at).to eq(expected_date)
-      end
+      game2 = Game.new(true, '2022-01-01', '2022-01-01', true)
+      expect(game2.can_be_archived?).to eq(false)
 
-      it 'returns correct publish_date' do
-        game = Game.new('Yes', '2019/01/01', '2001/01/01')
-        expected_date = Date.parse('2001/01/01')
-        expect(game.publish_date).to eq(expected_date)
-      end
+      game3 = Game.new(true, '01-01-2020', '01-05-2011', false)
+      expect(game3.can_be_archived?).to eq(true)
     end
   end
 end

@@ -1,9 +1,22 @@
+require 'json'
 require_relative 'book'
 require_relative 'label'
 require_relative 'music_album'
 require_relative 'genre'
+require_relative 'game'
+require_relative 'author'
+require_relative 'game_disp'
 
 class App
+  include GameDisp
+  attr_accessor :books, :music_albums, :games, :authors
+
+  def initialize
+    @games = []
+    @authors = []
+    retrieve_data
+  end
+
   def self.list_books
     Book.display
   end
