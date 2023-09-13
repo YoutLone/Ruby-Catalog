@@ -5,7 +5,7 @@ describe Game do
     @game = Game.new(name: 'oumaima', multiplayer: 'true', last_played_at: '2020/12/2',
                      published_date: '2020/13/3', author: @author)
   end
-  describe "#new" do
+  describe '#new' do
     context 'when creating a new game' do
       it 'should be an instance of a book' do
         expect(@game).to be_an_instance_of Game

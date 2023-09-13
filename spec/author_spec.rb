@@ -4,8 +4,8 @@ describe Author do
   before :each do
     @author = Author.new(first_name: 'oumaima', last_name: 'nejjari')
   end
-  describe "#new" do
-    context "when creating a new author" do
+  describe '#new' do
+    context 'when creating a new author' do
       it 'should be an instance of a author class ' do
         expect(@author).to be_an_instance_of Author
       end
