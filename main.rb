@@ -3,6 +3,8 @@ require_relative 'book'
 require_relative 'label'
 require_relative 'music_album'
 require_relative 'genre'
+require_relative 'game'
+require_relative 'author'
 
 puts 'Welcome to Catolog of My Things'.center(50, '#')
 puts ''.center(50, '-')
@@ -35,19 +37,19 @@ class Selection
     when 2
       App.list_music_albums
     when 3
-      puts 'list all games'
+      App.list_games
     when 4
       App.list_all_genres
     when 5
       App.list_all_labels
     when 6
-      puts 'list all authors'
+      App.list_all_authors
     when 7
       App.add_book
     when 8
       App.add_music_album
     when 9
-      puts 'add a game'
+      App.add_game
     when 10
       App.save_and_exit
       puts 'Exit from the app'

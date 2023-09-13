@@ -1,3 +1,4 @@
+-- code below added by team member #2
 CREATE TABLE books (
     id serial PRIMARY KEY,
     publisher VARCHAR(50) NOT NULL,
@@ -26,4 +27,20 @@ CREATE TABLE MusicAlbum (
   genre_id INT NULL,
   FOREIGN KEY (genre_id) REFERENCES item(id),
   PRIMARY KEY (id)
+);
+-- code below added by team member #3
+CREATE TABLE Author (
+  id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+  first_name VARCHAR(50),
+  last_name VARCHAR(50),
+  item_id INTEGER,
+  FOREIGN KEY(item_id) REFERENCES Item(id)
+);
+
+CREATE TABLE Game (
+  id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+  item_id INTEGER,
+  last_played_date DATE NOT NULL,
+  multiplayer BOOLEAN NOT NULL,
+  FOREIGN KEY(item_id) REFERENCES Item(id)
 );

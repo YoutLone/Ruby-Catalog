@@ -1,0 +1,38 @@
+[
+  {
+    "id": 813,
+    "name": "Rich Poor",
+    "multiplayer": true,
+    "last_played_at": "2023/05/05",
+    "author": {
+      "id": 513,
+      "first_name": "Robert",
+      "last_name": "T.Kiyosaki"
+    },
+    "published_date": "2012/04/08"
+  },
+  {
+    "id": 851,
+    "name": "Rich Poor",
+    "multiplayer": true,
+    "last_played_at": "2012/05/04",
+    "author": {
+      "id": 738,
+      "first_name": "Robert",
+      "last_name": "T.Kiyosaki"
+    },
+    "published_date": "2010/05/04"
+  },
+  {
+    "id": 834,
+    "name": "Harry Potter",
+    "multiplayer": true,
+    "last_played_at": "2023/05/04",
+    "author": {
+      "id": 205,
+      "first_name": "JK",
+      "last_name": "Rowling"
+    },
+    "published_date": "2010/08/07"
+  }
+]
