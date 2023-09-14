@@ -1,0 +1,50 @@
+[
+  {
+    "id": 985,
+    "name": "Rich Poor",
+    "multiplayer": true,
+    "last_played_at": "2023/05/05",
+    "author": {
+      "id": 4,
+      "first_name": "Robert",
+      "last_name": "T.Kiyosaki"
+    },
+    "published_date": "2012/04/08"
+  },
+  {
+    "id": 643,
+    "name": "Rich Poor",
+    "multiplayer": true,
+    "last_played_at": "2012/05/04",
+    "author": {
+      "id": 380,
+      "first_name": "Robert",
+      "last_name": "T.Kiyosaki"
+    },
+    "published_date": "2010/05/04"
+  },
+  {
+    "id": 433,
+    "name": "Harry Potter",
+    "multiplayer": true,
+    "last_played_at": "2023/05/04",
+    "author": {
+      "id": 917,
+      "first_name": "JK",
+      "last_name": "Rowling"
+    },
+    "published_date": "2010/08/07"
+  },
+  {
+    "id": 540,
+    "name": "Dota",
+    "multiplayer": true,
+    "last_played_at": "2020/12/2",
+    "author": {
+      "id": 120,
+      "first_name": "than",
+      "last_name": "myo htet"
+    },
+    "published_date": "2020/1/1"
+  }
+]

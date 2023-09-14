@@ -1,0 +1,38 @@
+[
+  {
+    "id": 321,
+    "on_spotify": true,
+    "genre": {
+      "id": 590,
+      "name": "pop "
+    },
+    "published_date": "2020/12/2"
+  },
+  {
+    "id": 26,
+    "on_spotify": true,
+    "genre": {
+      "id": 131,
+      "name": "Hip Hop"
+    },
+    "published_date": "2015/08/04"
+  },
+  {
+    "id": 427,
+    "on_spotify": true,
+    "genre": {
+      "id": 616,
+      "name": "Rock"
+    },
+    "published_date": "2018/06/04"
+  },
+  {
+    "id": 508,
+    "on_spotify": true,
+    "genre": {
+      "id": 733,
+      "name": "pop "
+    },
+    "published_date": "2020/12/2"
+  }
+]
